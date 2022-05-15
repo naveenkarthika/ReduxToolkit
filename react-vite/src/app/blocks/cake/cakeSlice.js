@@ -1,4 +1,4 @@
-const createSlice = require('@reduxjs/toolkit').createSlice;
+import { createSlice } from '@reduxjs/toolkit';
 
 
 const initialState = {
@@ -17,5 +17,6 @@ const cakeSlice = createSlice({
     } 
 })
 
-module.exports = cakeSlice.reducer
-module.exports.cakeActions = cakeSlice.actions
+export const { ordered, restoked } = cakeSlice.actions
+
+export default cakeSlice.reducer;
